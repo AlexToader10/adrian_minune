@@ -9,6 +9,8 @@
 
 #define PCM_DEVICE "hw:1,0"
 
+#define VERSION "3.0.2"
+
 // WAV header structure
 typedef struct WAVHeader {
     char riff_header[4]; // Contains "RIFF"
@@ -27,6 +29,7 @@ typedef struct WAVHeader {
 } WAVHeader;
 
 int main(int argc, char *argv[]) {
+    printf("ALSA WAV player v%s\n", VERSION);
     if (argc < 2) {
         fprintf(stderr, "Usage: %s <wav file>\n", argv[0]);
         return -1;
