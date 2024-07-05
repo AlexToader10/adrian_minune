@@ -7,7 +7,7 @@
 #include <termios.h>
 
 
-#define PCM_DEVICE "default"
+#define PCM_DEVICE "hw:1,0"
 
 // WAV header structure
 typedef struct WAVHeader {
